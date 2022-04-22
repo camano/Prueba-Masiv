@@ -1,0 +1,39 @@
+<div class="container d-flex justify-content-center">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Tarear nueva</h3>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="addTarea()">
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" [(ngModel)]="nuevoTarea.tarea_descripcion" class="form-control" name="tarea_descripcion" id="tarea_descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Creador</label>
+                    <input type="text" class="form-control" [(ngModel)]="nuevoTarea.creado" name="creado" id="creado" required>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <button class="btn btn-outline-success btn-block"  type="submit">
+                                <i class="fas fa-sign-in-alt"></i> Crear tarea</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <button routerLink="/" class="btn btn-outline-success btn-block"  type="submit">
+                                <i class="fas fa-sign-in-alt"></i> Regresar</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+</div>

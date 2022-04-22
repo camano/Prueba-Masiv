@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+    <div>
+        <button routerLink="/AddTarea" class="btn btn-success">Agregar</button>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Creado</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea of tareas">
+            <th scope="row">{{tarea.tarea_id}}</th>
+            <td>{{tarea.tarea_descripcion}}</td>
+            <td>{{tarea.creado}}</td>
+            <td>{{tarea.fecha}}</td>
+            <td>{{tarea.estado.estado_nombre}}</td>
+            <td >                
+                <button *ngIf="tarea.estado.estado_id==1 " (click)="updatetarea(tarea.tarea_id);" class="btn btn-warning ">Cambiar</button>             
+                <button (click)="deleteTarea(tarea.tarea_id);" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>          
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "463a2434-6c76-4a58-af3d-b005c42f6d9b",
+		"name": "prueba masiv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar tareas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/tareas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tareas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tareasxid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/tareas/30",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tareas",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardarTarea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tarea_descripcion\": \"tarea 3\",\n    \"estado_id\": \"1\",\n    \"creado\": \"jonathan\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/tareas/addTarea",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tareas",
+						"addTarea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editTarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"estado_id\": \"1\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/tareas/updateTarea/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tareas",
+						"updateTarea",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTarea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/tareas/deleteTarea/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tareas",
+						"deleteTarea",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
